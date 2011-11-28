@@ -1,0 +1,321 @@
+\documentclass[final]{beamer}
+\mode<presentation>
+\usetheme{Boadilla}
+\setbeamercovered{transparent}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage[latin1]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage{graphicx}
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage[T1]{fontenc}
+
+
+\title[GIT]{Curso: Git e GitHub}
+\subtitle{2º Dia - Git - Funções básicas}
+\author[Ricardo]{Ricardo da Fonseca e Michel Farah}
+\institute{UNESP}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+\begin{frame}
+\frametitle{Conteúdo}
+\tableofcontents
+\end{frame}
+
+\section{Introdução}
+\subsection[O que é Git?]{O que é Git?}
+
+\begin{frame}
+\frametitle{O que é Git?}
+\begin{columns}
+\begin{column}{0.3\textwidth}
+ \begin{figure}[!htb]
+     \centering
+     \includegraphics<1-> [width=2 cm]{images/git.jpg}
+\end{figure}
+ \begin{figure}[!htb]
+     \centering
+     \includegraphics<3-> [width=2 cm]{images/linus-torvalds.jpg}
+\end{figure}
+\end{column}
+\begin{column}{0.7\textwidth}
+  \begin{itemize}
+     \item <2-> É um software livre de controle de versão distribuído com ênfase em velocidade.
+     \item <3-> Projetado e desenvolvido por Linus Torvalds para o
+     desenvolvimento do núcleo do Linux (kernel).
+     \item <4-> Seu download pode ser feito gratuitamente no site oficial
+     http://git-scm.com/
+  \end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\subsection[Sobre o Git]{Sobre o Git}
+\begin{frame}
+\frametitle{Sobre o Git}
+\begin{columns}
+\begin{column}{1\textwidth}
+\begin{figure}
+   \centering
+   \includegraphics<1->[width=6cm]{images/DDS.jpg}
+\end{figure}
+
+\textbf<1->{Desenvolvimento Distribuído}
+\begin{itemize}
+  \item <2->Cópias locais do histórico de desenvolvimento;
+  \item <3->Fácil acesso através de um protocolo Git (Via SSH) ou usando HTTP;
+  \item <4->Sem configurações especiais de um servidor.
+\end{itemize}
+
+%INCLUIR ESTE TEXTO NO MANUAL
+%\textbf{Desenvolvimento Distribuído} - Fornece uma cópia local do histórico de
+%desenvolvimento inteiro e as mudanças são copiadas de um repositório para
+%outro.
+%
+%Os repositórios podem ser facilmente acessados através do eficiente protocolo
+%Git (via SSH) ou simplesmente usando HTTP.
+%
+%Assim pode-se publicar seu repositório em qualquer lugar, sem configurações
+%especiais de um servidor.
+\end{column}
+\end{columns}
+\end{frame}
+
+\subsection{Principais Características}
+\begin{frame}
+\frametitle{Principais Características}
+\begin{itemize}
+  \item <1-> \textbf{Suporte para desenvolvimentos não lineares.}
+
+     Com rápida criação de branches e merges eficientes
+ 
+  \item <2->\textbf{Desenvolvimento distribuído.}
+  \item <3->\textbf{Eficiência na manipulação de projetos extensos.}
+  \item <4>\textbf{Autenticação criptografada do histórico.}
+  
+  O histórico é armazenado de tal forma que o nome de uma revisão ('commit'
+  para o Git) depende do histórico completo. Uma vez publicado não é possível
+  alterar as versões antigas sem que se note esta versão.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Hospedagem de Projetos}
+Atualmente existem diversos websites que fazem hospedagem de código
+fonte para repositórios Git.
+\begin{figure}
+ \includegraphics<1->[width=3cm]{images/gitorious.png}     
+ \includegraphics<1->[width=2cm]{images/sourceforge.jpg}
+ \includegraphics<1->[width=5cm]{images/source_repo.png}
+\end{figure}
+
+\begin{figure}
+ \includegraphics<1->[width=3cm]{images/unfuddle_logo[4].jpg}
+ \includegraphics<1->[width=4cm]{images/google_code2.png}
+ \includegraphics<1->[width=2cm]{images/github.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Projetos que usam o Git}
+Um grande número de projetos de softwares de alto-padrão estão utilizando agora
+o Git como controle de versão:
+\begin{figure}
+ \includegraphics<1->[width=2cm]{images/gnome.jpg}     
+ \includegraphics<1->[width=2cm]{images/fedoralogo.jpg}
+ \includegraphics<1->[width=2cm]{images/debian-logo.jpg}
+  \includegraphics<1->[width=2cm]{images/logoarch.png}
+\end{figure}
+
+\begin{figure}
+ \includegraphics<1->[width=2cm]{images/Android.jpg}
+ \includegraphics<1->[width=2cm]{images/vlc.jpg}
+ \includegraphics<1->[width=2cm]{images/gimp.jpg}
+  \includegraphics<1->[width=2cm]{images/eclipse.jpg}
+\end{figure}
+\end{frame}
+
+\section{Como instalar}
+\subsection{No Windows}
+
+\begin{frame}
+\frametitle{No Windows}
+Baixar e instalar a versão mais recente em:
+
+http://code.google.com/p/msysgit/downloads/list
+\begin{figure}
+\centering
+\includegraphics[width=8cm]{images/win_passo1.jpg}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{No Windows}
+Clique duas vezes no arquivo baixado e em seguida no botão Executar
+\begin{figure}
+\centering
+\includegraphics[width=8cm]{images/win_passo2.jpg}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{No Windows}
+Clique em Next
+\begin{figure}
+\centering
+\includegraphics[width=8cm]{images/win_passo2.jpg}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{No Windows}
+Clique em Next
+\begin{figure}
+\centering
+\includegraphics[width=8cm]{images/win_passo3.jpg}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{No Windows}
+Clique em Next
+\begin{figure}
+\centering
+\includegraphics[width=8cm]{images/win_passo4.jpg}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{No Windows}
+Clique em Next
+\begin{figure}
+\centering
+\includegraphics[width=8cm]{images/win_passo5.jpg}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{No Windows}
+Clique em Next
+\begin{figure}
+\centering
+\includegraphics[width=8cm]{images/win_passo6.jpg}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{No Windows}
+Clique em Next
+\begin{figure}
+\centering
+\includegraphics[width=8cm]{images/win_passo7.jpg}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{No Windows}
+Clique em Next
+\begin{figure}
+\centering
+\includegraphics[width=8cm]{images/win_passo8.jpg}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{No Windows}
+Clique em Next
+\begin{figure}
+\centering
+\includegraphics[width=8cm]{images/win_passo9.jpg}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{No Windows}
+Clique em Next
+\begin{figure}
+\centering
+\includegraphics[width=8cm]{images/win_passo10.jpg}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{No Windows}
+Finalmente clique em Finish
+\begin{figure}
+\centering
+\includegraphics[width=8cm]{images/win_passo11.jpg}
+\end{figure}
+\end{frame}
+
+\subsection{No Linux}
+\begin{frame}
+\begin{itemize}
+  \item Abrir o terminal
+  \item Digitar no terminal:
+  
+  \fbox{ \textit {\$ sudo apt-get install git git-doc git-svn git-gui gitk}}
+
+ 
+\end{itemize}
+\textbf{Nota:} Nas versões mais antigas do Debian/Ubuntu tem que digitar
+\textit{git-core} ao invés de \textit{git}
+\end{frame}
+
+\section{Configurando o Git}
+\subsection{Primeira vez}
+\begin{frame}
+\frametitle{Primeira vez}
+No Windows:
+Abrir o programa \textbf{Git Bash}
+\begin{figure}
+\centering
+\includegraphics[width=4cm]{images/win_passo12.jpg}
+\end{figure}
+
+No Linux: Abrir o \textbf{Console}
+\end{frame}
+
+\begin{frame}
+\frametitle{Primeira vez}
+Configurar o nome do usuário:
+
+\fbox{ \textit {\$ git config --global user.name "Nome do usuário"}}
+
+\fbox{ \textit {\$ git config --global user.email email@exemplo.com}}
+
+
+Colocar cores:
+
+\fbox{ \textit {\$ git config --global color.diff auto}}
+
+\fbox{ \textit {\$ git config --global color.status auto}}
+
+\fbox{ \textit {\$ git config --global color.branch auto}}
+
+Habilitar git-rerere ('reuse recorded resolution') - \textbf{opcional}
+
+\fbox{ \textit {\$ git config --global rerere.enabled 1}}
+\end{frame}
+
+\begin{frame}
+\frametitle{Hora do Café. . . }
+
+\begin{figure}
+\centering
+\includegraphics[width=5cm]{images/intervalo.jpg}
+\end{figure}
+
+\center{30 min.}
+
+\end{frame}
+
+
+
+\end{document}

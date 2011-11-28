@@ -1,0 +1,298 @@
+\documentclass[final]{beamer}
+\mode<presentation>
+\usetheme{Boadilla}
+\setbeamercovered{transparent}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage[latin1]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage{graphicx}
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage[T1]{fontenc}
+
+
+\title[GIT]{Curso: Git e GitHub}
+\subtitle{1º Dia - Caracterizando o problema}
+\author[Michel]{Ricardo da Fonseca e Michel Farah}
+\institute{UNESP}
+\date{\today}
+
+%\AtBeginSubsection[]
+%{
+%\begin{frame}<beamer>
+%\frametitle{Outline}
+%\tableofcontents[currentsection,currentsubsection]
+%\end{frame}
+%}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+\begin{frame}
+\frametitle{Conteúdo}
+\tableofcontents
+\end{frame}
+
+\section{Introdução}
+\subsection[Problema]{Escrevendo um trabalho}
+
+\begin{frame}
+\frametitle{Problemas}
+%\framesubtitle{Subtitles are optional}
+
+\begin{itemize}
+  \item <1-> Alguém já sobrescreveu um trabalho por acidente e acabou perdendo
+  as alterações?
+  \item<2-> Tem dificuldade em saber quais as alterações efetuadas e quando
+  foram feitas?
+  \item<3-> Tem dificuldade em recuperar uma versão anterior a qual está
+  trabalhando?
+  \item<4-> Tem problemas em manter várias versões do trabalho?
+\end{itemize}
+\end{frame}
+
+\subsection[Problema]{Formas de controlar um trabalho}
+
+\begin{frame}
+\frametitle{Formas de escrever um Trabalho:}
+%\framesubtitle{Subtitles are optional}
+
+\begin{itemize}
+  \item Como organizamos nossas Dissertações ou Teses?
+\begin{figure}[!htb]
+     \centering
+     \includegraphics[width=11 cm]{1dia/monografia.png}
+\end{figure}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Formas de escrever um Trabalho:}
+%\framesubtitle{Subtitles are optional}
+
+\begin{itemize}
+  \item Como corrigimos nossos trabalhos?
+\begin{figure}[!htb]
+     \centering
+     \includegraphics[width=11 cm]{1dia/correcoes.png}
+\end{figure}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Trabalho em grupo:}
+%\framesubtitle{Subtitles are optional}
+
+\begin{itemize}
+  \item Como organizamos um trabalho em grupo?
+\begin{figure}[!htb]
+     \centering
+     \includegraphics[width=9 cm]{1dia/grupo.png}
+\end{figure}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Exemplos:}
+%\framesubtitle{Subtitles are optional}
+
+\begin{itemize}
+  \item <2-> Desenvolvimento de Programas;
+  \item <3-> Desenvolvimento de Algoritmos complexos;
+  \item <4-> Escrever trabalhos;
+  \item <5-> Entre outros.
+\end{itemize}
+\begin{figure}[!htb]
+     \centering
+     \includegraphics<1->[width=5 cm]{1dia/desenvolvimento.jpg}
+\end{figure}
+\end{frame}
+
+\section{Controlando as versões}
+
+\subsection{Para que serve o controle de versão?}
+
+\begin{frame}
+\frametitle{O que é um controlador de versão?}
+%\framesubtitle{Subtitles are optional}
+- É um software com finalidade de gerenciar diferentes versões no
+desenvolvimento de um documento qualquer.
+
+- Muito utilizado por empresas de desenvolvimento de softwares e é util em
+diversos aspectos, tanto para projetos pequenos e pessoais como também para
+grandes projetos comerciais.
+
+- Os mais comuns são:
+\begin{itemize}
+  \item <1-> Git;
+  \item <3-> SVN;
+  \item <4-> SourceSafe (da Microsoft);
+  \item <5-> ClearCase (da IBM);
+  \item <6-> Entre muitos outros.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Para que serve?}
+%\framesubtitle{Subtitles are optional}
+
+\begin{itemize}
+  \item <1-> \textbf{Histórico} - Registra toda a evolução do projeto, cada
+  alteração em cada arquivo. Ajuda a responder algumas questões básicas:
+\end{itemize}
+
+\begin{columns}
+\begin{column}{0.3\textwidth}
+\begin{enumerate}
+    \item<2-> ``quem?''
+    \item<3-> ``o quê?''
+    \item<4-> ``onde?''
+    \item<5-> ``quando?''
+    \item<6-> ``por que?''
+    \item<7-> ``como?''
+    \item<8-> ``histórico''
+\end{enumerate}
+\end{column}
+\begin{column}{0.7\textwidth}
+\begin{figure}[!htb]
+     \centering
+     \includegraphics[width=6 cm]{1dia/5w2h.jpg}
+\end{figure}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Para que serve?}
+%\framesubtitle{Subtitles are optional}
+
+\begin{itemize}
+  \item <1-> \textbf{Colaboração} - Possibilita que várias pessoas trabalhem em
+  paralelo sobre os mesmos arquivos sem que um sobrescreva o trabalho do outro.
+\end{itemize}
+
+
+\begin{figure}[!htb]
+     \centering
+     \includegraphics[width=6 cm]{1dia/colaboracao.jpg}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Para que serve?}
+%\framesubtitle{Subtitles are optional}
+
+\begin{itemize}
+  \item <1-> \textbf{Variações no Projeto} - Mantém linhas diferentes de
+  evolução do mesmo projeto
+\end{itemize}
+
+
+\begin{figure}[!htb]
+     \centering
+     \includegraphics[width=6 cm]{1dia/grupos.jpg}
+\end{figure}
+
+\end{frame}
+
+\subsection{Como funciona?}
+
+\begin{frame}
+\frametitle{Como funciona?}
+
+\begin{figure}[!htb]
+     \centering
+     \includegraphics[width=5 cm]{1dia/area_trabalho_repositorio.png}
+     \caption{Estrutura de um controle de versão é composta por repositório e
+     área de trabalho. A comunicação entre elas é através de operações como
+     \textit{commit} e \textit{update}}
+     \label{Label de referência para a imagem}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Como funciona?}
+- Cada \textit{commit} gera uma \alert{revisão} no repositório, contendo as
+modificações feitas, data e autor.
+
+- Cada \alert{revisão} gera uma ``foto'' dos arquivos e diretórios daquele
+\textit{commit}, gerando o histórico do projeto. Estas ``fotos'' podem ser
+recuperadas e analisadas sempre que desejado.
+
+ \begin{figure}[!htb]
+     \centering
+     \includegraphics[width=4.5 cm]{1dia/revisao.jpg}
+\end{figure}
+
+\end{frame}
+
+\section{Objetivo do Curso}
+
+\begin{frame}
+\frametitle{Objetivos:}
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+
+\begin{enumerate}
+  \item <1-> O que é o Git?
+  \begin{itemize}
+     \item <2-> Instalação;
+     \item <2-> Funções básicas.
+  \end{itemize}
+  \item <3-> O que é GitHub?
+  \begin{itemize}
+     \item <4-> Funções básicas.
+  \end{itemize}
+\end{enumerate}
+
+\end{column}
+
+\begin{column}{0.5\textwidth}
+
+ \begin{figure}[!htb]
+     \centering
+     \includegraphics<1-> [width=2 cm]{1dia/git.jpg}
+\end{figure}
+
+ \begin{figure}[!htb]
+     \centering
+     \includegraphics<3-> [width=2 cm]{1dia/github.png}
+\end{figure}
+
+\end{column}
+
+\end{columns}
+
+\end{frame}
+
+
+\section{Cronograma}
+
+\begin{frame}
+\frametitle{Cronograma:}
+
+\tiny
+\begin{tabular}{|l*{5}{|p{1.6cm}}|}
+\hline
+\textbf{Período}&\textbf{Segunda}&\textbf{Terça}&\textbf{Quarta}&\textbf{Quinta}\\
+\hline
+\textbf{8:00-10:00}&Apresentação&Git&Git&GitHub\\
+\hline
+\textbf{10:00-10:30}&Café&Café&Café&Café\\
+\hline
+\textbf{10:30-12:00}&Exercícios&Exercícios&Exercícios&Exercícios\\
+\hline
+
+\end{tabular}
+
+\end{frame}
+
+\end{document}
